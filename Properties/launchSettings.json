@@ -1,0 +1,10 @@
+﻿{
+  "profiles": {
+    "CallawayPreOwnedService": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
