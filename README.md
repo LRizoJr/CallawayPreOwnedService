@@ -9,3 +9,4 @@
 ## TODO:
 - Make API address and endpoints config settings
 - Include Handedness in Product definition (?)
+- Add Installation and Setup instructions to README
