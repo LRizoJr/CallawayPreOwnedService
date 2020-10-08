@@ -6,8 +6,6 @@
 ### .NET Core 3.1
 ### SendGrid (E-Mail)
 
-
 ## TODO:
-- Add configurable parent-product search (replace MensRightApexIronParams class with something configurable: Product definition stored in Json with a key that can be loaded dynamically based on a setting)
 - Add configurable target product search
--  Make API address and endpoints config settings
+- Make API address and endpoints config settings
