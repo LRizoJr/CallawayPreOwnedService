@@ -1,11 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Hosting.WindowsServices;
-using System.Net.Http;
 using Microsoft.Extensions.Configuration;
 
 namespace CallawayPreOwnedService
@@ -26,11 +23,8 @@ namespace CallawayPreOwnedService
                     services.AddHostedService<Worker>();
                     services.AddHttpClient<Services.CallawayPreOwnedService>(c => c.BaseAddress = new Uri(Services.CallawayPreOwnedService.API_BASE_ADDRESS));
                     
-                    // Wanted Products
-                    services.AddSingleton<List<Models.Product>>(c => new List<Models.Product>() { 
-                        new Models.Product() { Club = "4 Iron" },
-                    });
-
+                    // Wanted Products (loaded dynamically from appsettings)
+                    services.AddSingleton<List<Models.Product>>(c => hostContext.Configuration.GetSection(Models.WantedProductOptions.Key).Get<Models.WantedProductOptions>().WantedProductsList.ToList());
                     services.AddSingleton<Services.ProductAlertService>();
                 });
     }

@@ -29,13 +29,14 @@ namespace CallawayPreOwnedService.Services
             foreach(var availableProduct in availableProducts)
             {
                 // Check if this is something we're looking for
-                if(_targetProducts.Where(target => (string.IsNullOrEmpty(target.Club) || target.Club  == availableProduct.Club)
-                                                              && (string.IsNullOrEmpty(target.ShaftMaterial) || target.ShaftMaterial == availableProduct.ShaftMaterial)
-                                                              && (string.IsNullOrEmpty(target.ShaftFlex) || target.ShaftFlex == availableProduct.ShaftFlex)
-                                                              && (string.IsNullOrEmpty(target.ShaftType) || target.ShaftType == availableProduct.ShaftType)
-                                                              && (string.IsNullOrEmpty(target.LieAngle) || target.LieAngle == availableProduct.LieAngle)
-                                                              && (string.IsNullOrEmpty(target.Length) || target.Length == availableProduct.Length)
-                                                              && (string.IsNullOrEmpty(target.Condition) || target.Condition == availableProduct.Condition)).Count() > 0)
+                if(_targetProducts.Where(target =>  (string.IsNullOrEmpty(target.ParentProductID) || target.ParentProductID.Equals(availableProduct.ParentProductID, StringComparison.OrdinalIgnoreCase))
+                                                    && (string.IsNullOrEmpty(target.Club) || target.Club.Equals(availableProduct.Club, StringComparison.OrdinalIgnoreCase))
+                                                    && (string.IsNullOrEmpty(target.ShaftMaterial) || target.ShaftMaterial.Equals(availableProduct.ShaftMaterial, StringComparison.OrdinalIgnoreCase))
+                                                    && (string.IsNullOrEmpty(target.ShaftFlex) || target.ShaftFlex.Equals(availableProduct.ShaftFlex, StringComparison.OrdinalIgnoreCase))
+                                                    && (string.IsNullOrEmpty(target.ShaftType) || target.ShaftType.Equals(availableProduct.ShaftType, StringComparison.OrdinalIgnoreCase))
+                                                    && (string.IsNullOrEmpty(target.LieAngle) || target.LieAngle.Equals(availableProduct.LieAngle, StringComparison.OrdinalIgnoreCase))
+                                                    && (string.IsNullOrEmpty(target.Length) || target.Length.Equals(availableProduct.Length, StringComparison.OrdinalIgnoreCase))
+                                                    && (string.IsNullOrEmpty(target.Condition) || target.Condition.Equals(availableProduct.Condition, StringComparison.OrdinalIgnoreCase))).Count() > 0)
                 {
                     wantedProducts.Add(availableProduct);
                 }
