@@ -7,6 +7,17 @@
 ### SendGrid (E-Mail)
 
 ## TODO:
-- Make API address and endpoints config settings
-- Include Handedness in Product definition (?)
-- Add Installation and Setup instructions to README
+- Version 1.0:
+   - Add Installation and Setup instructions to README
+   - Add to Config
+      - API address and endpoints
+      - Polling interval
+- Version 2.0:
+   - Include Handedness in Product definition (?)
+   - File DB implementation to track emails sent per product
+   - Containerize and look for cloud deployment options
+   - Refactor to support centralized deployment with support for mutiple users
+- Backlog:
+   - Web UI to configure settings and add alerts/users
+
+
