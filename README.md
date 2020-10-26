@@ -12,6 +12,7 @@ ___
 - If there are any matches to the wanted products list (also configured in the apsettings.json), it will send an e-mail from/to the e-mail addresses configured in the service with subject line Callaway Pre-Owned Service Alert: Wanted Product(s) Available with information on the product available and a direct link to said product.
 - The service uses SendGrid  (www.sendgrid.com) which is a service that will handle the e-mail sending functionality. In order to get the e-mails, you'll need to register a (free) account and reqest an API Key (also free). See Configuration section for details.
 - Since this is a Windows Service, it will only run while your PC is awake. When your PC goes to sleep or is shut-off, the service will not work.
+- The Service is state-less, meaning it has no awareness of what it has done previously. If you have a Product search that hits one of your matches, you will continue to get e-mails about it until the product is no longer in inventory, or you refine the product matching criteria.
 ### Installation
 - Download release package from GitHub Releases (CallawayPreownedService.zip)
 - Extract zip file contents to a folder
