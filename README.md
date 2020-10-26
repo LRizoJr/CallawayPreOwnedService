@@ -15,7 +15,7 @@ ___
 - The Service is state-less, meaning it has no awareness of what it has done previously. If you have a Product search that hits one of your matches, you will continue to get e-mails about it until the product is no longer in inventory, or you refine the product matching criteria.
 ### Installation
 - Make sure you have DotNet Core 3.1 Runtime (Desktop) installed: https://dotnet.microsoft.com/download/dotnet-core/thank-you/runtime-desktop-3.1.9-windows-x64-installer
-- Download release package from GitHub Releases (CallawayPreownedService.zip)
+- Download release package from GitHub Releases (CallawayPreownedService.zip): https://github.com/LRizoJr/CallawayPreOwnedService/releases/tag/1.0
 - Extract zip file contents to a folder
 - Navigate to extracted folder and run the InstallService.cmd file as an Administrator (this will install the "CallawayPreOwnedService" service on your PC)
 
