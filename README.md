@@ -13,6 +13,7 @@ ___
 - The service uses SendGrid  (www.sendgrid.com) which is a service that will handle the e-mail sending functionality. In order to get the e-mails, you'll need to register a (free) account and reqest an API Key (also free). See Configuration section for details.
 - Since this is a Windows Service, it will only run while your PC is awake. When your PC goes to sleep or is shut-off, the service will not work.
 - The Service is state-less, meaning it has no awareness of what it has done previously. If you have a Product search that hits one of your matches, you will continue to get e-mails about it until the product is no longer in inventory, or you refine the product matching criteria.
+- If you make any type of configuration update to the appsettings.json file, you'll need to restart the service for the settings to kick in. 
 ### Installation
 - Make sure you have DotNet Core 3.1 Runtime (Desktop) installed: https://dotnet.microsoft.com/download/dotnet-core/thank-you/runtime-desktop-3.1.9-windows-x64-installer
 - Download release package from GitHub Releases (CallawayPreownedService.zip): https://github.com/LRizoJr/CallawayPreOwnedService/releases/tag/1.0
