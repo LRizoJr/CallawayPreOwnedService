@@ -37,6 +37,7 @@ namespace CallawayPreOwnedService.Models
                             switch(attribute.label)
                             {
                                 case "Club":
+                                case "Club/Set":
                                     product.Club = attribute.value;
                                     break;                            
                                 case "Shaft Material":
